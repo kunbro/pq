@@ -10,6 +10,7 @@
   top: 30px;
   z-index: 100;
 }
+
 #logo img{
   width: 80px;
 }
@@ -111,12 +112,12 @@ span:last-child {
 
 }
 
-/*마지막 그리드 폰트만 마진값 변경*/
+/*마지막 그리드 txt 마진값 변경*/
 .grid05 h1 {
   margin-left: 25%;
 }
 
-/**/
+/*메인txt 슬라이드 애니메이션*/
 
 .grid01 h1{
   animation: slide01 1.5s;
@@ -150,10 +151,10 @@ span:last-child {
 
 @keyframes slide03 {
   from{
-    margin-bottom: -100%;
+    bottom: -100%;
   }
   to{
-    margin-bottom: 0%;
+    bottom: 0%;
   }
 }
 
@@ -184,7 +185,7 @@ span:last-child {
 }
 
 /*서브 상단텍스트 타이핑 모션효과 start*/
-
+/*
 .grid01 h1{
   animation: type 1s steps(5, end),blink 1s step-end infinite;
   overflow: hidden;
@@ -206,7 +207,7 @@ span:last-child {
   from, to { border-color: transparent }
   50% { border-color: white }
 }
-
+*/
 /*서브 상단텍스트 타이핑 모션효과 end*/
 
 #foot {
