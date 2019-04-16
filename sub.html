@@ -6,56 +6,105 @@
   <title></title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+KR" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
-<div class="container">
-  <div id="logo"><img src="img/logo.svg" alt="logo" style="filter:brightness(1)"></div>
-  <div class="menu-icon">
-    <span style="background-color:white;"></span>
-    <span style="background-color:white;"></span>
-  </div>
+  <div class="container">
+    <div id="logo"><a href="index.html"><img src="img/logo.svg" alt="logo" style="filter:brightness(1)"></a></div>
+    <div class="sub-menu">
+      <ul>
+        <li><a href="">Artpq</a></li>
+        <li><a href="">R&D</a></li>
+        <li><a href="">Teams</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">QA</a></li>
+      </ul>
+    </div>
+    <div class="menu-icon">
+      <span class="icon-span" style="background-color:white;"></span>
+      <span class="icon-span" style="background-color:white;"></span>
+    </div>
+    <div class="tab-menu">
+      <ul>
+        <li><a href="#" class="hover7"><span class="hover7__label">artpq</span></a></li>
+        <li><a href="#" class="hover7"><span class="hover7__label">history</span></a></li>
+        <li><a href="#" class="hover7"><span class="hover7__label">조직도</span></a></li>
+        <li><a href="#" class="hover7"><span class="hover7__label">수행사업실적</span></a></li>
+        <li><a href="#" class="hover7"><span class="hover7__label">찾아오시는길</span></a></li>
+        <li><a href="#" class="hover7"><span class="hover7__label">찾아오시는길</span></a></li>
+      </ul>
+    </div>
+    <div class="tab-bg"></div>
+    <!--제이쿼리 2뎁스 상단에 고정-->
+    <script type="text/javascript">
+      $(function() {
+        var $gnb = $(".tab-menu").first();
+        var gnbTop = $gnb.offset().top;
+        function fixGNB() {
+          var winTop = $(window).scrollTop();
+          $gnb.css({
+            'position': (winTop > gnbTop) ? 'fixed' : 'absolute',
+            'top': (winTop > gnbTop) ? '0px' : '',
+            'width': (winTop > gnbTop) ? '100%' : ''
+          });
+        }
+        fixGNB();
+        $(window).scroll(function() {
+          fixGNB();
+        });
+      });
+    </script>
+    <!--
   <div id="foot" style="background-color:white;">
-    <p>Copyright © ARTPQ. All rights reserved. Contact Us</p>
+    <p>Copyright © ARTPQ. All rights reserved. <a href="">Contact U</a>s</p>
   </div>
-  <div class="grid grid01" style="overflow:visible;">
-    <div class="bar01" style="background-color:white;"></div>
-    <div class="block01"></div>
-    <h1 ><a href="#" style="color:white;text-decoration:none;">About</a></h1>
+  -->
+    <div class="grid grid00" style="overflow:visible;">
+      <div class="bar01" style="background-color:white;"></div>
+      <div class="block01"></div>
+      <h1><a href="#" style="color:white;text-decoration:none;">About</a></h1>
+    </div>
+    <div class="grid grid02">
+    </div>
+    <div class="grid grid03">
+    </div>
+    <div class="grid grid04">
+    </div>
+    <div class="grid grid05">
+      <div class="bar02" style="background-color:white;"></div>
+    </div>
+
+    <div class="line-area">
+      <div class="line line01"></div>
+      <div class="line line02"></div>
+      <div class="line line03"></div>
+      <div class="line line04"></div>
+    </div>
+
+    <div id="bg">
+      <div class="filter" style="background-color:black;"></div>
+      <video id="videobg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="video/google.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-  <div class="grid grid02">
+  <div class="container02">
+    <div class="cont01">
+      <div class="cont01-img01">
+        <img src="" alt="">
+        <div class="cont01-bg"></div>
+      </div>
+      <div class="cont01-txt01">
+        <h3>Lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus illo, ipsum distinctio placeat, amet porro vitae vero. Facilis quae ratione, officiis nemo, corrupti numquam at, omnis vitae provident, cumque fuga.</p>
+        <div class="btn"><a href="#">PLAY</a></div>
+        <div class="bg-txt01">About us</div>
+      </div>
+    </div>
   </div>
-  <div class="grid grid03">
-  </div>
-  <div class="grid grid04">
-  </div>
-  <div class="grid grid05">
-    <div class="bar02" style="background-color:white;"></div>
-  </div>
-
-  <div class="line-area">
-    <div class="line line01"></div>
-    <div class="line line02"></div>
-    <div class="line line03"></div>
-    <div class="line line04"></div>
-  </div>
-
-  <div id="bg">
-    <div class="filter" style="background-color:black;"></div>
-    <video id="videobg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-      <source src="video/google.mp4" type="video/mp4">
-    </video>
-  </div>
-
-
-
-</div>
-<div class="container02">
-
-</div>
-
-
 </body>
 
 </html>
