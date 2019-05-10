@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=decive-width,initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
@@ -12,8 +13,8 @@
 </head>
 
 <body>
-  <div class="container">
-    <div id="logo"><a href="index.html"><img src="img/logo.svg" alt="logo" style="filter:brightness(1)"></a></div>
+  <div id="container">
+    <div id="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
     <div class="sub-menu">
       <ul>
         <li><a href="">Artpq</a></li>
@@ -28,21 +29,26 @@
       <span class="icon-span" style="background-color:white;"></span>
     </div>
     <div class="tab-menu">
+      <div id="logo02"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+      <div class="menu-icon02">
+        <span class="icon-span"></span>
+        <span class="icon-span"></span>
+      </div>
       <ul>
-        <li><a href="#" class="hover7"><span class="hover7__label">artpq</span></a></li>
+        <li><a href="#container02" class="hover7"><span class="hover7__label">artpq</span></a></li>
         <li><a href="#" class="hover7"><span class="hover7__label">history</span></a></li>
         <li><a href="#" class="hover7"><span class="hover7__label">조직도</span></a></li>
         <li><a href="#" class="hover7"><span class="hover7__label">수행사업실적</span></a></li>
         <li><a href="#" class="hover7"><span class="hover7__label">찾아오시는길</span></a></li>
-        <li><a href="#" class="hover7"><span class="hover7__label">찾아오시는길</span></a></li>
       </ul>
     </div>
     <div class="tab-bg"></div>
-    <!--제이쿼리 2뎁스 상단에 고정-->
+    <!--제이쿼리 2뎁스 상단에 고정 및 가로 값 변경 효과-->
     <script type="text/javascript">
       $(function() {
         var $gnb = $(".tab-menu").first();
         var gnbTop = $gnb.offset().top;
+
         function fixGNB() {
           var winTop = $(window).scrollTop();
           $gnb.css({
@@ -57,6 +63,34 @@
         });
       });
     </script>
+    <!--제이쿼리, 스크롤 위치에서 해당 객체 페이드인아웃 효,-->
+    <script type="text/javascript">
+      /* javascript, jquery */
+      $(function() {
+        var vi = 900;
+        $(window).scroll(function() {
+          var num = $(window).scrollTop();
+          if (num > vi) {
+            $('.menu-icon02, #logo02').fadeIn();
+          } else {
+            $('.menu-icon02, #logo02').fadeOut();
+          }
+        });
+      });
+    </script>
+
+    <!--
+    <script type="text/javascript">
+      var$root = $('html,body');
+      $('.tab-menu > a').click(function(){
+        $root.animate({
+          scrollTop:$($.attr(this,'href')).offset().top
+        },800);
+        return false;
+      });
+    </script> -->
+
+
     <!--
   <div id="foot" style="background-color:white;">
     <p>Copyright © ARTPQ. All rights reserved. <a href="">Contact U</a>s</p>
@@ -83,26 +117,37 @@
       <div class="line line03"></div>
       <div class="line line04"></div>
     </div>
-
+    <!--상단 top 배경영-->
     <div id="bg">
-      <div class="filter" style="background-color:black;"></div>
+      <!--      <div class="filter" style="background-color:black;"></div>-->
       <video id="videobg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
         <source src="video/google.mp4" type="video/mp4">
       </video>
     </div>
   </div>
-  <div class="container02">
-    <div class="cont01">
-      <div class="cont01-img01">
-        <img src="" alt="">
-        <div class="cont01-bg"></div>
+  <!--sub 컨텐츠 시작-->
+  <div id="container02">
+    <div class="cont-area">
+      <div class="tab02">
+        <ul>
+          <li><a href="#">CEO 인사말</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Vision</a></li>
+        </ul>
       </div>
-      <div class="cont01-txt01">
-        <h3>Lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus illo, ipsum distinctio placeat, amet porro vitae vero. Facilis quae ratione, officiis nemo, corrupti numquam at, omnis vitae provident, cumque fuga.</p>
-        <div class="btn"><a href="#">PLAY</a></div>
-        <div class="bg-txt01">About us</div>
+      <div class="cont01">
+        <div class="cont01-img01">
+          <img src="img/ceo.png" alt="">
+          <div class="cont01-bg"></div>
+          <div class="cont01-shadow"></div>
+        </div>
+        <div class="cont01-txt01">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus illo, ipsum distinctio placeat, amet porro vitae vero. Facilis quae ratione, officiis nemo, corrupti numquam at, omnis vitae provident, cumque fuga.</p>
+          <div class="btn"><a href="#">PLAY</a></div>
+        </div>
       </div>
+      <div class="bg-txt01">About us</div>
     </div>
   </div>
 </body>
